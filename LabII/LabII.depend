@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1571092144 source:/home/sisadmin/Документы/study/C is Life 2.0/LabII/icheck.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<locale.h>
+	<float.h>
+
+1571092083 source:/home/sisadmin/Документы/study/C is Life 2.0/LabII/launcher.c
+	<stdio.h>
+	<stdlib.h>
+	<float.h>
+	<locale.h>
+
+1571089300 /home/sisadmin/Документы/study/C is Life 2.0/LabII/task1.c
+	<stdio.h>
+	<stdlib.h>
+
+1571089373 /home/sisadmin/Документы/study/C is Life 2.0/LabII/icheck.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<locale.h>
+	<float.h>
+
+1571089748 source:/home/sisadmin/Документы/study/C is Life 2.0/LabII/task1.c
+	<stdio.h>
+	<stdlib.h>
+
