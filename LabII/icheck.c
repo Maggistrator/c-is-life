@@ -1,39 +1,38 @@
-/**Функция продвинутой проверки ввода.
-Конечно, можно было бы обойтись и примитивной, но имеет смысл раз и навсегда сделать хорошо*/
+/**Функция inputCheck отвечает за продвинутую проверку ввода.
+Конечно, можно было бы обойтись и примитивной,
+но имеет смысл раз и навсегда сделать хорошо*/
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
 #include <locale.h>
 #include <float.h>
 
-#define INVALID -1      /*Нужные константы*/
-#define NEGATIVE -1
-#define INTEGER 10
-#define REAL 0.1
-#define POSITIVE 1
-#define multiplier char
+#define INVALID -1                  /*Константа недопустимого значения*/
+#define NEGATIVE -1                 /*Множитель отрицательного числа*/
+#define INTEGER 10                  /*Множитель целой части числа*/
+#define REAL 0.1                    /*Множитель дробной части числа*/
+#define POSITIVE 1                  /*Множитель положительного числа*/
+#define multiplier char             /*Директива, обособляющая множители как тип данных*/
 
-#define ERR_INVALID_CHARACTER 1     /*Коды ошибок*/
-#define ERR_INVALID_MINUS 2
-#define ERR_INVALID_COMMA 3
-#define ERR_INVALID_EXPONENT 4
-#define ERR_INVALID_VALUE_EXPONENT 5
+/*Коды ошибок*/
+#define ERR_INVALID_CHARACTER 1     /*Невалидный символ*/
+#define ERR_INVALID_MINUS 2         /*Недопустимый минус*/
+#define ERR_INVALID_COMMA 3         /*Недопустимая запятая*/
+#define ERR_INVALID_EXPONENT 4      /*Недопустимая экспонента*/
+#define ERR_INVALID_VALUE_EXPONENT 5    /**/
 
 
-char allowed[14] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '-', ',', '.', 'e'}; /*Массив допустимых символов*/
+/*Словарь допустимых символов*/
+char allowed[14] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '-', ',', '.', 'e'};
 
 double icheck(){
     int valueof(char);
-    //char number[16];                                          /*Введённое число*/
-    char s, minus = 0, error = 0, zap = 0, exponent = 0;    /*s - считываемый символ*/
+    char s, minus = 0, error = 0, zap = 0, exponent = 0;    /*s - считываемый символ, error - код ошибки*/
     double value = 0, drob = 1;                             /*value - значение числа; drob - порядок дробной части*/
     multiplier sign = POSITIVE, sign_exponent = POSITIVE;   /*Знаки значения и экспоненты*/
-    int num_do_zap = 0, num_pos_zap = 0, step = 0, j = 0, it;   /*num_do_zap кол-во цифр до зяпятой; num_pos_zap - после; step - степень(значение экспоненты); j -просто счётчик*/
+    int num_do_zap = 0, num_pos_zap = 0, step = 0, j = 0;   /*num_do_zap кол-во цифр до зяпятой; num_pos_zap - после; step - степень(значение экспоненты); j -просто счётчик*/
     while (((s = getchar()) != '\n')&&(error == 0))         /*Цикл будет считывать символы до нажатия enter, обрабатывать до первой ошибки*/
-    //scanf("%[^\n]",number);
-    //for(it = 0; it < (sizeof(number) / sizeof(char)); it++)
     {
-        //s = number[it];
         int index = valueof(s);                             /*index - присваивается значение функции valueof*/
         if (index == INVALID)                               /*Если символы нет в массиве допустимых символов, то error будет присвоен код ошибки Недопустимый символ*/
             error = ERR_INVALID_CHARACTER;
@@ -91,16 +90,16 @@ double icheck(){
         }
     }
     if (sign_exponent < 0)      /*Число возводится в степень(экспоненту)*/
-        for(j; j < step; j++)
+        for(j = 0; j < step; j++)
             value *= REAL;
     else
-        for(j; j < step; j++)
+        for(j = 0; j < step; j++)
             value *= INTEGER;
     value *= sign;              /*Числу приписывается знак(минус, если есть)*/
     switch (error)              /*Вывод в соответствии с ошибкой*/
     {
     case 0:                     /*0 - нет ошибок*/
-        printf("%g\n", value);
+        printf("%gno errors \n", value);
         break;
     case 1:
         printf("Был введён недопустимый символ\n");
@@ -121,6 +120,7 @@ double icheck(){
 
     /*Если работа завершена корректно, возвращаем значение. В противном случае - недопустимый MAX_DOUBLE*/
     value = (error == 0) ? value : DBL_MAX;
+    printf("no errors, returning value %g\n", value);
     return value;
 }
 

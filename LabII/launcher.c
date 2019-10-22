@@ -3,39 +3,33 @@
 #include <float.h>
 #include <locale.h>
 
+double checkit(void);
+int teFunc(double, double);
+int mathTask(double);
+
 int main()
 {
     setlocale(LC_ALL, "Rus");
-    printf("Введите номер задания:");
-    int task = icheck();
-    scanf("%d", &task);
-
     double x, y;
-    int correct = 0;
+    double task = checkit();
+    printf("task is:%lf", task);
 
-
-    switch(task)
+    switch((int)task)
     {
         case 1:
-            while(!correct) {
-                printf("Введите x:");
-                x = icheck();
-                printf("Введите у:");
-                y = icheck();
-
-                if(x < DBL_MAX-DBL_EPSILON && y < DBL_MAX-DBL_EPSILON){
-                    correct = 1;
-                } else{
-                    printf("\nПовторите ввод:");
-                }
-            }
+            printf("\nВведите x:");
+            x = checkit();
+            printf("\nВведите y:");
+            y = checkit();
             teFunc(x, y);
+        break;
+        case 2:
+
         break;
 
         default:
             printf("Задание не готово или не существует.");
         break;
     }
-
     return 0;
 }
