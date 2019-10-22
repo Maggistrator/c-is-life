@@ -3,16 +3,11 @@
 #include <float.h>
 #include <math.h>
 
-int mathTask(double x){
+double mathTask(double x){
     double result;
     printf("\n---Задание 2---\n");
-    if(checkAVA()){
-        result = x*x - cos(log(sqrt(fabs(x)))/tan(exp(-x)));
-        printf("x = %.2lf результат вычислений: %.2lf", x, result);
-    } else {
-        printf("kek, error");
-    }
-
+    if(checkAVA()) result = x*x - cos(log(sqrt(fabs(x)))/tan(exp(-x)));
+    else printf("Выражение не удовлетворяет области определения\n");
     return result;
 }
 

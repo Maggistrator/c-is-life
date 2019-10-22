@@ -20,7 +20,6 @@ double checkit(){
 
     do{
         isValid = TRUE;
-        printf("Insert a number:");
         scanf("%s", data);
 
         /*Цикл, обходящий массив символов, и проверяющий их на валидность*/
@@ -29,6 +28,7 @@ double checkit(){
             if(c >= '0' && c <= '9') continue;
             /*Если символ числом не является, проверяем, является ли он допустимым*/
             else switch(c){
+                case '-':
                 case '.':
                 case ',':
                 case 'e':
