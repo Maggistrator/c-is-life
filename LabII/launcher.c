@@ -8,7 +8,7 @@ double teFunc(double, double);      /*Задача 1*/
 double mathTask(double);            /*Задача 2*/
 int restrictPt(double, double);     /*Задача 3*/
 void EORow(int);                    /*Задача 4*/
-int FibonacciIsGay(int);
+int FibonacciGTN(int);
 
 int main()
 {
@@ -47,7 +47,10 @@ int main()
         case 5:
             printf("Эта программа вычисляет первое число Фибоначчи больше заданного.\n");
             printf("Введите N (>= 1):");
-            result = FibonacciIsGay((int)checkit());
+            while(1)
+                if((result = checkit()) < 2) printf("nope, try again");
+                else break;
+            result = FibonacciGTN((int)result);
             printf("Искомое число: %.lf", result);
         break;
         default:
