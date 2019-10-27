@@ -1,42 +1,11 @@
 # depslib dependency file v1.0
-1571092144 source:/home/sisadmin/Документы/study/C is Life 2.0/LabII/icheck.c
+1571741078 source:/home/sova/Development/Memeland/C is Life 2/LabII/checkit.c
 	<stdlib.h>
 	<stdio.h>
-	<math.h>
-	<locale.h>
-	<float.h>
-
-1571092083 source:/home/sisadmin/Документы/study/C is Life 2.0/LabII/launcher.c
-	<stdio.h>
-	<stdlib.h>
-	<float.h>
-	<locale.h>
-
-1571089300 /home/sisadmin/Документы/study/C is Life 2.0/LabII/task1.c
-	<stdio.h>
-	<stdlib.h>
-
-1571089373 /home/sisadmin/Документы/study/C is Life 2.0/LabII/icheck.c
-	<stdlib.h>
-	<stdio.h>
-	<math.h>
-	<locale.h>
-	<float.h>
-
-1571089748 source:/home/sisadmin/Документы/study/C is Life 2.0/LabII/task1.c
-	<stdio.h>
-	<stdlib.h>
 
 1571819793 source:/home/sova/Development/Memeland/C is Life 2/LabII/task1.c
 	<stdio.h>
 	<stdlib.h>
-
-1571123554 source:/home/sova/Development/Memeland/C is Life 2/LabII/icheck.c
-	<stdlib.h>
-	<stdio.h>
-	<math.h>
-	<locale.h>
-	<float.h>
 
 1571819824 source:/home/sova/Development/Memeland/C is Life 2/LabII/task2.c
 	<stdio.h>
@@ -44,44 +13,27 @@
 	<float.h>
 	<math.h>
 
-1571834700 source:/home/sova/Development/Memeland/C is Life 2/LabII/launcher.c
-	<stdio.h>
-	<stdlib.h>
-	<float.h>
-	<locale.h>
-
-1571123176 /home/sova/Development/Memeland/C is Life 2/LabII/icheck.c
-	<stdlib.h>
-	<stdio.h>
-	<math.h>
-	<locale.h>
-	<float.h>
-
-1571115769 /home/sova/Development/Memeland/C is Life 2/LabII/task1.c
-	<stdio.h>
-	<stdlib.h>
-
-1571120120 /home/sova/Development/Memeland/C is Life 2/LabII/task2.c
-	<stdio.h>
-	<stdlib.h>
-	<float.h>
-	<math.h>
-
-1571741078 source:/home/sova/Development/Memeland/C is Life 2/LabII/checkit.c
-	<stdlib.h>
-	<stdio.h>
-
 1571818523 source:/home/sova/Development/Memeland/C is Life 2/LabII/task3.c
 	<stdio.h>
 	<stdlib.h>
 	<float.h>
 
-1571815770 source:/home/sova/Development/Memeland/C is Life 2/LabII/task4.c
+1572201387 source:/home/sova/Development/Memeland/C is Life 2/LabII/task4.c
 	<stdio.h>
 	<stdlib.h>
 	<float.h>
 
-1571832683 source:/home/sova/Development/Memeland/C is Life 2/LabII/task5.c
+1572199714 source:/home/sova/Development/Memeland/C is Life 2/LabII/task5.c
 	<stdio.h>
 	<stdlib.h>
+
+1572201777 source:/home/sova/Development/Memeland/C is Life 2/LabII/task6.c
+	<stdio.h>
+	<stdlib.h>
+
+1572207617 source:/home/sova/Development/Memeland/C is Life 2/LabII/launcher.c
+	<stdio.h>
+	<stdlib.h>
+	<float.h>
+	<locale.h>
 

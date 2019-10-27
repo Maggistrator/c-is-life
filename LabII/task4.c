@@ -12,4 +12,5 @@ void EORow(int N){
         else for(int i = 2; i <= N; i+=2) printf("%d  ", i);
     }
     else printf("Значение не удовлетворяет условию задачи.");
+    printf("\n");
 }

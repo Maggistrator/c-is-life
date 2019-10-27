@@ -8,13 +8,15 @@ double teFunc(double, double);      /*Задача 1*/
 double mathTask(double);            /*Задача 2*/
 int restrictPt(double, double);     /*Задача 3*/
 void EORow(int);                    /*Задача 4*/
-int FibonacciGTN(int);
+int FibonacciGTN(int);              /*Задача 5*/
+void GCDReFract(int, int);
 
 int main()
 {
-    setlocale(LC_ALL, "Rus");
-    double x, y, task, result;
-    printf("Введите номер задания:");
+    setlocale(LC_ALL, "");
+    double x, y, task=1, result;
+    while(task){
+    printf("Введите номер задания, или 0 для того, чтобы закрыть программу:");
     task = checkit();
 
     switch((int)task)
@@ -46,16 +48,21 @@ int main()
             break;
         case 5:
             printf("Эта программа вычисляет первое число Фибоначчи больше заданного.\n");
-            printf("Введите N (>= 1):");
-            while(1)
-                if((result = checkit()) < 2) printf("nope, try again");
+            while(printf("Введите N (>= 1):"), 1)
+                if((result = checkit()) < 2) printf("nope, try again\n");
                 else break;
             result = FibonacciGTN((int)result);
-            printf("Искомое число: %.lf", result);
+            printf("Искомое число: %.lf\n", result);
+        break;
+        case 6:
+            x = checkit();
+            y = checkit();
+            GCDReFract((int)x, (int)y);
         break;
         default:
-            printf("Задание не готово или не существует.");
+            printf("Задание не готово или не существует.\n");
         break;
+    }
     }
     return 0;
 }
