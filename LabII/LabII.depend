@@ -27,13 +27,19 @@
 	<stdio.h>
 	<stdlib.h>
 
-1572201777 source:/home/sova/Development/Memeland/C is Life 2/LabII/task6.c
+1572207828 source:/home/sova/Development/Memeland/C is Life 2/LabII/task6.c
 	<stdio.h>
 	<stdlib.h>
 
-1572207617 source:/home/sova/Development/Memeland/C is Life 2/LabII/launcher.c
+1572296303 source:/home/sova/Development/Memeland/C is Life 2/LabII/launcher.c
 	<stdio.h>
 	<stdlib.h>
 	<float.h>
 	<locale.h>
+	<math.h>
+
+1572266971 source:/home/sova/Development/Memeland/C is Life 2/LabII/task7.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
 

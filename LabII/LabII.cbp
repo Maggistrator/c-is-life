@@ -55,6 +55,9 @@
 		<Unit filename="task6.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="task7.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<debugger />

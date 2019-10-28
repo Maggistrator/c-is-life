@@ -15,10 +15,10 @@ double ExpNegX(double);             /*Задача 7*/
 
 int main()
 {
-    char * out;
-    if ((out = setlocale(LC_ALL, "ru_RU.UTF-8")) == NULL)
+    char out[50];
+    if (out = setlocale(LC_ALL, "") == NULL)
         printf("Russian unaviable.\n");
-        else printf("Locale is:%s\n",out);
+        else printf("")
     double x, y, task=1, result;
     while(task){
     printf("Введите номер задания, или 0 для того, чтобы закрыть программу:");
