@@ -15,6 +15,6 @@ int restrictPt(double x, double y){
         ay = (x > -DBL_EPSILON && x < DBL_EPSILON) ? 'y' : 'n';
     }
     //из соображений компактности вывода он не выведен из функции
-    printf("Четверть: %d, принадлежит ax:%c, принадлежит ay:%c", area, ax, ay);
+    printf("Четверть: %d, принадлежит ax:%c, принадлежит ay:%c\n", area, ax, ay);
     return area;
 }
