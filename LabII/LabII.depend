@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1571741078 source:/home/sova/Development/Memeland/C is Life 2/LabII/checkit.c
+1572618965 source:/home/sova/Development/Memeland/C is Life 2/LabII/checkit.c
 	<stdlib.h>
 	<stdio.h>
 
@@ -7,7 +7,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1571819824 source:/home/sova/Development/Memeland/C is Life 2/LabII/task2.c
+1572979276 source:/home/sova/Development/Memeland/C is Life 2/LabII/task2.c
 	<stdio.h>
 	<stdlib.h>
 	<float.h>
@@ -31,7 +31,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1572334014 source:/home/sova/Development/Memeland/C is Life 2/LabII/launcher.c
+1572979438 source:/home/sova/Development/Memeland/C is Life 2/LabII/launcher.c
 	<stdio.h>
 	<stdlib.h>
 	<float.h>

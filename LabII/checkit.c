@@ -35,16 +35,15 @@ double checkit(){
                 case 'E':
                     /*Если символ допустИм, переходим к следующему*/
                     continue;
-                    break;
                 default:
                     /*Если символ недпустим, флаг валидности переклюается, и функция
                     потребует ввести число заново*/
-                    printf("nope, try again\n");
                     isValid = FALSE;
                     break;
             }
         }
         sscanf(data, "%lf", &value);
+        if(!isValid) printf("nope, try again\n");
     } while(!isValid);
     return value;
 }
