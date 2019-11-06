@@ -73,7 +73,7 @@ int main()
             printf("Эта программа вычисляет сумму членов бесконечного ряда с точностью до 1e-4.\n");
             printf("Введите x:"); x = checkit();
             result = expNegX(x);
-            printf("Результат работы функции: %lf\n",result);
+            printf("Результат работы функции: %lf\n", result);
             printf("Проверочная функция: %lf\n", exp(-x));
         break;
         case 8:
