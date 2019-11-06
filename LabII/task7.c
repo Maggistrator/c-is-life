@@ -17,9 +17,7 @@ double recalc2EpsRecurrent(double x, double numerator, long denominator, int i){
     int sign = i % 2 ? -1 : 1;
     numerator *= x;
     denominator *= i++;
-    printf("n=(%d) * %.4lf / %d\n", sign, numerator, denominator);
     double func = sign * numerator / denominator;
-    printf("n = %.4lf\n",func);
 
     if(current_depth > depth) {
         printf("too deep");

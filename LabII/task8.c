@@ -7,16 +7,15 @@ double controlFunc(double);
 
 /**Infinity Row высчитывает сумму ряда с определенной точностью*/
 double InfRow(double x){
-    return recFunc(x, x, 1);
+    return recFunc(x, 1, 1);
 }
 
 double recFunc(double x, double deltanum, int i){
     double func;
-    deltanum *= x;
-    int denominator = i++;
-    func = deltanum / denominator;
+    deltanum = (deltanum*=x)*cos(i*M_PI/3);
+    func = deltanum / i;
     if(fabs(func) < 1e-6) return func;
-    else return func += recFunc(x, deltanum*cos(i*M_PI/3), i);
+    else return func += recFunc(x, deltanum, ++i);
 }
 
 /*Вычисление контрольной функции*/
