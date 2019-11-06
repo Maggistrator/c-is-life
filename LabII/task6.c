@@ -13,9 +13,10 @@ void GCDReFract(int x, int y){
 
 int gcd(int x, int y){
     int gcd;
-    for (int i = 1; i <= x && i <= y; i++){
-       if (x % i == 0 && y % i == 0)
-          gcd = i;
+    int i = 1;
+    while (i <= x && i <= y){
+       if (x % i == 0 && y % i == 0) gcd = i;
+       i += 1;
     }
     return gcd;
 }
