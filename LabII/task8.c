@@ -12,8 +12,8 @@ double InfRow(double x){
 
 double recFunc(double x, double deltanum, int i){
     double func;
-    deltanum = (deltanum*=x)*cos(i*M_PI/3);
-    func = deltanum / i;
+    deltanum *= x;
+    func = deltanum * cos(i*M_PI/3) / i;
     if(fabs(func) < 1e-6) return func;
     else return func += recFunc(x, deltanum, ++i);
 }
