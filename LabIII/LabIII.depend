@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1573594128 source:/home/anon-dev/Development/c-is-life/LabIII/main.c
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+
