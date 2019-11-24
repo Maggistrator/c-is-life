@@ -31,7 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="main.c">
+		<Unit filename="task1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="task2.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
