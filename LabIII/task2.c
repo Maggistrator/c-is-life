@@ -7,6 +7,15 @@ int main(void)
     int *a, b;
     float *x, y = 3.5;
     double *m, n;
+    printf("Pointers are: \
+    \n*p:%p \
+    \nc:%p  \
+    \n*a:%p \
+    \nb:%p  \
+    \n*x:%p \
+    \ny:%p  \
+    \n*m:%p \
+    \nn:%p\n\n", &p, &c, &a, &b, &x, &y, &m, &n);
     a = &b;
     printf("Enter b = ");
     scanf("%d", a);
@@ -40,6 +49,6 @@ int main(void)
     printf("n = %lf\tn = %p\tm = %p\n", n, &n, m);
     *m = (float)*a - n + (int)*x;
     printf(" m = %p\t*m = %lf\n", m, *m);
-    system("pause");
+    getchar();
     return 0;
 }
