@@ -7,15 +7,7 @@ int main(void)
     int *a, b;
     float *x, y = 3.5;
     double *m, n;
-    printf("Pointers are: \
-    \n*p:%p \
-    \nc:%p  \
-    \n*a:%p \
-    \nb:%p  \
-    \n*x:%p \
-    \ny:%p  \
-    \n*m:%p \
-    \nn:%p\n\n", &p, &c, &a, &b, &x, &y, &m, &n);
+    printf("Указатели: \n*p:%p c:%p \n*a:%p b:%p \n*x:%p y:%p \n*m:%p n:%p\n\n", &p, &c, &a, &b, &x, &y, &m, &n);
     a = &b;
     printf("Enter b = ");
     scanf("%d", a);
@@ -47,8 +39,11 @@ int main(void)
     printf("*a = %d\t*x = %f\t*m = %lf\n", *a, *x, *m);
     m++;
     printf("n = %lf\tn = %p\tm = %p\n", n, &n, m);
-    *m = (float)*a - n + (int)*x;
-    printf(" m = %p\t*m = %lf\n", m, *m);
+    //*m = (float)*a - n + (int)*x;
+    //адрес, который записан в *m не существует или содержит данные другой программы
+    //разыменовывать такой указатель - значит получить системную ошибку
+    //printf(" m = %p\t*m = %lf\n", m, *m);
+    printf("Значения переменных (кроме *m): \n*p:%d c:%d \n*a:%d b:%d \n*x:%f y:%f \nn:%lf\n\n", *p, c, *a, b, *x, y, n);
     getchar();
     return 0;
 }
