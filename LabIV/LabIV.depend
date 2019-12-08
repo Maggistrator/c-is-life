@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1574944687 source:/home/sova/Development/Memeland/LabIV/main.c
+	"lab_iv.h"
+
+1574945834 /home/sova/Development/Memeland/LabIV/lab_iv.h
+	<stdio.h>
+	<stdlib.h>
+
+1574944676 source:/home/sova/Development/Memeland/LabIV/grow.c
+	"lab_iv.h"
+
+1575035905 source:/home/sova/Development/Memeland/LabIV/arelins.c
+	"lab_iv.h"
+
+1575032284 source:/home/sova/Development/Memeland/LabIV/arr_u.c
+
