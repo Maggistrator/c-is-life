@@ -2,10 +2,16 @@
 #include <stdio.h>
 #include <errno.h>
 #include <string.h>
+#include <float.h>
 
+#ifndef boolean
 #define boolean char
 #define yup 1
 #define nope 0
+#endif // boolean
+
+typedef enum {TYPE_INT, TYPE_CHAR, TYPE_FLOAT, TYPE_DOUBLE, TYPE_STRING} TYPE;
+
 
 /**
 * Char Check It 0.8.0.0
@@ -42,7 +48,7 @@ char ccheckit(char* str){
     }
 
     long int temp = atoi(str);
-    if(temp > -128 && temp < 127) return (char)temp;
+    if(temp > -129 && temp < 128) return (char)temp;
     else {
         errno = 8;
         return 0;
@@ -51,63 +57,47 @@ char ccheckit(char* str){
 
 
 /**
-* Check It 0.0.6.0
-* Функция вводит число, и проверяет его валидность
-* @param data - слово, вводимое до первого пробела, табуляции, или переноса строки
+* Double Check It 0.8.0.0
+* Функция проверяет вещественное число двойной точности на валидность
+* @param data - входная строка, подлежащая парсингу
 */
 
 double dcheckit(char* data){
-    double value;               /*будущий результат работы функции*/
-    boolean isValid;
-
-    do{
-        isValid = yup;
-        scanf("%s", data);
-
-        /*Цикл, обходящий массив символов, и проверяющий их на валидность*/
-        for(int i = 0, c = data[0]; c != '\0'; i++, c = data[i]){
-            /*Если символ является числом, переходим к следующему*/
-            if(c >= '0' && c <= '9') continue;
-            /*Если символ числом не является, проверяем, является ли он допустимым*/
-            else switch(c){
-                case '-':
-                case '.':
-                case ',':
-                case 'e':
-                case 'E':
-                    /*Если символ допустИм, переходим к следующему*/
-                    continue;
-                default:
-                    /*Если символ недпустим, флаг валидности переклюается, и функция
-                    потребует ввести число заново*/
-                    isValid = nope;
-                    break;
+    /*на старте код ошибки всегда 0*/
+    errno = 0;
+    /*Цикл, обходящий массив символов, и проверяющий их на валидность*/
+    for(int i = 0, c = data[0]; c != '\0'; i++, c = data[i]){
+        /*Если символ является числом, переходим к следующему*/
+        if(c >= '0' && c <= '9') continue;
+        /*Если символ числом не является, проверяем, является ли он допустимым*/
+        else switch(c){
+            case '-':
+            case '.':
+            case ',':
+            case 'e':
+            case 'E':
+                /*Если символ допустИм, переходим к следующему*/
+                continue;
+            default:
+                /*Если символ недпустим, флаг валидности переключается, и функция
+                потребует ввести число заново*/
+                errno = 8;
+                return 0;
             }
         }
-        sscanf(data, "%lf", &value);
-        if(!isValid) printf("nope, try again\n");
-    } while(!isValid);
-    return value;
+
+    /*Парсинг, при помощи волшебной функции, которая и без меня всё умеет*/
+    long double value = atof(data);
+    /*Проверка на выход за границы диапазона*/
+    if(value > DBL_MAX) {
+        errno = 8;
+        return 0;
+    } else return value;
 }
 
 
 
-
 /*Array Element Insertion*/
-/*
-    Пока что тут упрощенная функция, и в последствии она будет забафана
-    нормальным алгоритмом
-    Требования:
-    - Ввод массивов с любым кол-вом измерений
-    - Ввод большого кол-ва значений сразу (построчно? через string?)
-    (Проверять каждый в цикле своей старой проверкой на корректность? забафать её силой указателей чтобы в случае ошибки возвращала NULL? использовать побочный эффект функции?)
-    - Коррекция отдельных неверно введённых значений по-одному вручную после массового ввода
-    - Ввод массивов любых типов (юзать union?)
-    - Допустимость ввода только выбранного кол-ва элементов конкретного массива, если будет введено больше, то они отбросятся
-*/
-
-typedef enum {TYPE_INT, TYPE_CHAR, TYPE_FLOAT, TYPE_DOUBLE, TYPE_STRING} TYPE;
-
 void arelins(void *ptr, TYPE t, int len){
 
 }

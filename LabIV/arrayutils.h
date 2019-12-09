@@ -1,6 +1,8 @@
-#include "checkit.c"
-#include "arelins.c"
+#ifndef boolean
+#define boolean char
+#define yup 1
+#define nope 0
+#endif // boolean
 
-double checkit(void);
-void arelins(void* pointer, char arr_t, int length);
-
+char ccheckit(char*);
+double dcheckit(char*);

@@ -1,11 +1,10 @@
-#include "lab_iv.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <errno.h>
 #include <string.h>
+#include "arrayutils.h"
 
 boolean grow(void);
-char ccheckit(char*);
 
 /*tests*/
 void test_grow(void);
@@ -13,8 +12,12 @@ void test_ccheckit(void);
 
 int main()
 {
-    test_ccheckit();
+    test_grow();
     return 0;
+}
+
+void test_dcheckit(){
+    /*TODO: write this func*/
 }
 
 void test_ccheckit(){

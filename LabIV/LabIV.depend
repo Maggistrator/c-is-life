@@ -22,21 +22,33 @@
 	<stdlib.h>
 	<stdio.h>
 
-1575911168 source:/home/sova/Development/Memeland/C is Life 2/LabIV/grow.c
-	"lab_iv.h"
+1575928037 source:/home/sova/Development/Memeland/C is Life 2/LabIV/grow.c
+	"arrayutils.h"
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
 
 1575666565 /home/sova/Development/Memeland/C is Life 2/LabIV/lab_iv.h
 	<stdio.h>
 	<stdlib.h>
 
-1575922736 source:/home/sova/Development/Memeland/C is Life 2/LabIV/main.c
-	"lab_iv.h"
+1575927424 source:/home/sova/Development/Memeland/C is Life 2/LabIV/main.c
 	<stdlib.h>
 	<stdio.h>
 	<errno.h>
 	<string.h>
+	"arrayutils.h"
 
-1575922531 source:/home/sova/Development/Memeland/C is Life 2/LabIV/arrayutils.c
+1575928108 source:/home/sova/Development/Memeland/C is Life 2/LabIV/arrayutils.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	<float.h>
+
+1575925619 /home/sova/Development/Memeland/C is Life 2/LabIV/arrayutils.h
+
+1575925058 /home/sova/Development/Memeland/C is Life 2/LabIV/arrayutils.c
 	<stdlib.h>
 	<stdio.h>
 	<errno.h>

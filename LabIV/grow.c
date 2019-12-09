@@ -1,21 +1,30 @@
-#include "lab_iv.h"
+#include "arrayutils.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <errno.h>
 /*
   g_row: Growing Row
   Определить, является ли массив из 20-элементов возрастающей последовательностью
-  (Следует ли мне вынести ввод за пределы функции?)
 */
-boolean grow(void)
-{
+boolean grow(void){
     double arr[20];
+    char *row_data = calloc(32, sizeof(char));
     for(int i = 0; i < 20; i++){
-        arr[i] = i;
+        printf("insert value:");
+        scanf("%s", row_data);
+        arr[i] = (int)dcheckit(row_data);
+        if(errno != 0) {
+            perror("(!)");
+            i--;
+        }
     }
-    boolean isGrowing = true;
+    free(row_data);
+    boolean isGrowing = yup;
     int i = 0;
     while(isGrowing && i < 19){
     printf("%.1lf  ", arr[i]);
         if(arr[i] >= arr[i+1]) {
-            isGrowing = false;
+            isGrowing = nope;
             printf("\ndat vector shrinks! just like youer pinas :3");
         }
         i++;
