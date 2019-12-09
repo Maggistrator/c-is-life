@@ -31,20 +31,12 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="arelins.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="arr_u.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="arrayutils.h" />
-		<Unit filename="checkit.c">
+		<Unit filename="arrayutils.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="grow.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="lab_iv.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>

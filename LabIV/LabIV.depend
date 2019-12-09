@@ -14,3 +14,31 @@
 
 1575032284 source:/home/sova/Development/Memeland/LabIV/arr_u.c
 
+1575032284 source:/home/sova/Development/Memeland/C is Life 2/LabIV/arr_u.c
+
+1575826129 source:/home/sova/Development/Memeland/C is Life 2/LabIV/arelins.c
+
+1575073869 source:/home/sova/Development/Memeland/C is Life 2/LabIV/checkit.c
+	<stdlib.h>
+	<stdio.h>
+
+1575911168 source:/home/sova/Development/Memeland/C is Life 2/LabIV/grow.c
+	"lab_iv.h"
+
+1575666565 /home/sova/Development/Memeland/C is Life 2/LabIV/lab_iv.h
+	<stdio.h>
+	<stdlib.h>
+
+1575922736 source:/home/sova/Development/Memeland/C is Life 2/LabIV/main.c
+	"lab_iv.h"
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<string.h>
+
+1575922531 source:/home/sova/Development/Memeland/C is Life 2/LabIV/arrayutils.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<string.h>
+

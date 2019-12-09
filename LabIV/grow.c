@@ -6,19 +6,20 @@
 */
 boolean grow(void)
 {
-    double arr[];
-
+    double arr[20];
+    for(int i = 0; i < 20; i++){
+        arr[i] = i;
+    }
     boolean isGrowing = true;
-    int i = 1;
-    while(isGrowing && i < 20){
-    printf("%.1lf  ",*(arr+i));
-        if(*(arr+i-1) >= *(arr+i)) {
+    int i = 0;
+    while(isGrowing && i < 19){
+    printf("%.1lf  ", arr[i]);
+        if(arr[i] >= arr[i+1]) {
             isGrowing = false;
-            printf("dat vector shrinks! just like youer pinas :3");
+            printf("\ndat vector shrinks! just like youer pinas :3");
         }
         i++;
     }
-    if(isGrowing) printf("duh, dat vector grows so fucking big!");
-    free(arr);
+    if(isGrowing) printf("\nduh, dat vector grows so fucking big!");
     return isGrowing;
 }
