@@ -1,5 +1,7 @@
 *.out
 *.o
+LabII/bin/
+LabII/obj/
 LabIII/bin/
 LabIII/obj/
 LabIV/bin/
