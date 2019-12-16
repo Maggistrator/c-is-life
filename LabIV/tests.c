@@ -11,14 +11,14 @@ void test_carelins(void);
 void test_darelins(void);
 
 void test_darelins(){
-    double* double_kek = calloc(5, sizeof(double));
+    double* double_kek = (double*)calloc(5, sizeof(double));
     darelins(double_kek, 5);
     putchar('\n');
     for(int i = 0; i < 5; i++) printf("%lf ", *(double_kek + i));
 }
 
 void test_carelins(){
-    char* kek = calloc(5, sizeof(char));
+    char* kek = (char*)calloc(5, sizeof(char));
     carelins(kek, 5);
     putchar('\n');
     for(int i = 0; i < 5; i++) printf("%d ", *(kek + i));
@@ -28,7 +28,7 @@ void test_cinsert(){
     double arr[20];
     printf("insert value:\n");
     for(int i = 0; i < 3; i++){
-        char *row_data = calloc(32, sizeof(char));
+        char *row_data = (char*)calloc(32, sizeof(char));
         cinsert(row_data);
         arr[i] = dcheckit(row_data);
         if(errno != 0) {
