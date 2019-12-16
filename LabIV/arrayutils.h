@@ -7,4 +7,5 @@
 char ccheckit(char*);
 double dcheckit(char*);
 void cinsert(char*);
-void carelins(void*, int);
+void carelins(char*, int);
+void darelins(double*, int);

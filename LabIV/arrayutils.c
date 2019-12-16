@@ -132,3 +132,17 @@ void carelins(char *ptr, int len){
     return;
 }
 
+/**Double Array Element Insertion*/
+void darelins(double *ptr, int len){
+    char *raw_data = calloc(32, sizeof(char));
+    for(int i = 0; i < len; i++){
+        cinsert(raw_data);
+        *(ptr + i) = dcheckit(raw_data);
+        if(errno != 0) {
+            perror("try again");
+            i--;
+        }
+    }
+    free(raw_data);
+    return;
+}

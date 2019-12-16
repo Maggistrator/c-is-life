@@ -56,3 +56,27 @@
 	<errno.h>
 	<string.h>
 
+1576523699 source:/home/anon-dev/Development/c-is-life/LabIV/grow.c
+	"arrayutils.h"
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+
+1576527497 /home/anon-dev/Development/c-is-life/LabIV/arrayutils.h
+
+1576527811 source:/home/anon-dev/Development/c-is-life/LabIV/arrayutils.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	<float.h>
+	<ctype.h>
+	<unistd.h>
+
+1576527811 source:/home/anon-dev/Development/c-is-life/LabIV/main.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	"arrayutils.h"
+

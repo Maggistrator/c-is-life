@@ -11,11 +11,19 @@ void test_grow(void);
 void test_ccheckit(void);
 void test_cinsert(void);
 void test_carelins(void);
+void test_darelins(void);
 
 int main()
 {
-    test_carelins();
+    test_darelins();
     return 0;
+}
+
+void test_darelins(){
+    double* double_kek = calloc(5, sizeof(double));
+    darelins(double_kek, 5);
+    putchar('\n');
+    for(int i = 0; i < 5; i++) printf("%lf ", *(double_kek + i));
 }
 
 void test_carelins(){
