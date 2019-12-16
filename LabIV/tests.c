@@ -4,20 +4,11 @@
 #include <string.h>
 #include "arrayutils.h"
 
-boolean grow(void);
-
 /*tests*/
-void test_grow(void);
 void test_ccheckit(void);
 void test_cinsert(void);
 void test_carelins(void);
 void test_darelins(void);
-
-int main()
-{
-    test_darelins();
-    return 0;
-}
 
 void test_darelins(){
     double* double_kek = calloc(5, sizeof(double));
@@ -84,9 +75,4 @@ void test_ccheckit(){
     free(one_char);
     free(c_seq);
     free(ic_seq);
-}
-
-void test_grow(){
-    printf("What does it says? Is it grows?\n");
-    printf("%s", grow() ? "\nWell, yess!\n" : "\nDuh, now way!1\n");
 }

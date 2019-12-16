@@ -2,34 +2,36 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <errno.h>
+
+#define ARR_LEN 5
+
+int grow(double*, int);
+
+int main(){
+    double *arr = calloc(ARR_LEN, sizeof(double));
+    printf("Введите %d чисел через пробел: ", ARR_LEN);
+    darelins(arr, ARR_LEN);
+    //for(int i = 0; i < 5; i++) printf("%lf ", arr[i]);
+    //putchar('\n');
+    printf("\n%s", grow(arr, ARR_LEN)
+    ? "Это возрастающая последовательность."
+    : "Это НЕ возрастающая последовательность.");
+}
+
 /*
   g_row: Growing Row
   Определить, является ли массив из 20-элементов возрастающей последовательностью
 */
-boolean grow(void){
-    double arr[20];
-    char *row_data = calloc(32, sizeof(char));
-    for(int i = 0; i < 20; i++){
-        printf("insert value:");
-        cinsert(row_data);
-        arr[i] = (int)dcheckit(row_data);
-        if(errno != 0) {
-            perror("(!)");
-            i--;
-        }
-    }
-    free(row_data);
-
-    boolean isGrowing = yup;
-    int i = 0;
-    while(isGrowing && i < 19){
-    printf("%.1lf  ", arr[i]);
-        if(arr[i] >= arr[i+1]) {
+int grow(double *arr, int len){
+    int i = 0, isGrowing = yup;
+    while(isGrowing && i < len-1){
+        //printf("%lf ", *(arr+i));
+        if(*(arr + i) >= *(arr+i+1)) {
             isGrowing = nope;
-            printf("\ndat vector shrinks! just like youer pinas :3");
+            //printf("\nsquee!\n");
         }
         i++;
     }
-    if(isGrowing) printf("\nduh, dat vector grows so fucking big!");
+    //printf("\ngrows:%d\n",isGrowing);
     return isGrowing;
 }

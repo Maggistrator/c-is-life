@@ -38,7 +38,7 @@
 		<Unit filename="grow.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="main.c">
+		<Unit filename="tests.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
