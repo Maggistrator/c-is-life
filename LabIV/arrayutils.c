@@ -3,6 +3,8 @@
 #include <errno.h>
 #include <string.h>
 #include <float.h>
+#include <ctype.h>
+#include <unistd.h>
 
 #ifndef boolean
 #define boolean char
@@ -22,8 +24,7 @@ typedef enum {TYPE_INT, TYPE_CHAR, TYPE_FLOAT, TYPE_DOUBLE, TYPE_STRING} TYPE;
 * А односимвольные строки возвращаются в том же виде, например:
 * '#' = '#'
 * 'a' = 'a'
-* если же исходная строка содержит более одного символа, и это не десятичное число, такое значение считается недопустимым, и
-* функция вернёт 0
+* если же исходная строка содержит более одного символа, и это не десятичное число, такое значение считается недопустимым, и функция вернёт 0
 * @param data - исходная строка
 */
 char ccheckit(char* str){
@@ -95,10 +96,39 @@ double dcheckit(char* data){
     } else return value;
 }
 
+/**
+* void Console Insert(char* source_string)
+* Платформозависимая, консольная функция ввода символов в строку src.
+* Вводит (подряд, в "raw" режиме!) любые символы, останавливаясь на SPACE и ENTER
+*/
+void cinsert(char* src){
+    system ("/bin/stty raw isig");
+    int c, i = 0;
+    while(((c = getchar()) != ' ') && (c != '\n')) {
+        *(src + i++) = c;
+    }
+    *(src + i) = '\0';
+    system ("/bin/stty -raw");
+    return ;
+}
 
+/**Standart newline input*/
+void stdnlin(){
+    /*TODO: create func*/
+}
 
-/*Array Element Insertion*/
-void arelins(void *ptr, TYPE t, int len){
-
+/**Char Array Element Insertion*/
+void carelins(char *ptr, int len){
+    char *raw_data = calloc(32, sizeof(char));
+    for(int i = 0; i < len; i++){
+        cinsert(raw_data);
+        *(ptr + i) = ccheckit(raw_data);
+        if(errno != 0) {
+            perror("try again");
+            i--;
+        }
+    }
+    free(raw_data);
+    return;
 }
 

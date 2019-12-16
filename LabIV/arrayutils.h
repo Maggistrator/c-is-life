@@ -6,3 +6,5 @@
 
 char ccheckit(char*);
 double dcheckit(char*);
+void cinsert(char*);
+void carelins(void*, int);

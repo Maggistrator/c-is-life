@@ -9,11 +9,35 @@ boolean grow(void);
 /*tests*/
 void test_grow(void);
 void test_ccheckit(void);
+void test_cinsert(void);
+void test_carelins(void);
 
 int main()
 {
-    test_grow();
+    test_carelins();
     return 0;
+}
+
+void test_carelins(){
+    char* kek = calloc(5, sizeof(char));
+    carelins(kek, 5);
+    putchar('\n');
+    for(int i = 0; i < 5; i++) printf("%d ", *(kek + i));
+}
+
+void test_cinsert(){
+    double arr[20];
+    printf("insert value:\n");
+    for(int i = 0; i < 3; i++){
+        char *row_data = calloc(32, sizeof(char));
+        cinsert(row_data);
+        arr[i] = dcheckit(row_data);
+        if(errno != 0) {
+            perror("kek:");
+            i--;
+        }
+        free(row_data);
+    }
 }
 
 void test_dcheckit(){

@@ -11,7 +11,7 @@ boolean grow(void){
     char *row_data = calloc(32, sizeof(char));
     for(int i = 0; i < 20; i++){
         printf("insert value:");
-        scanf("%s", row_data);
+        cinsert(row_data);
         arr[i] = (int)dcheckit(row_data);
         if(errno != 0) {
             perror("(!)");
@@ -19,6 +19,7 @@ boolean grow(void){
         }
     }
     free(row_data);
+
     boolean isGrowing = yup;
     int i = 0;
     while(isGrowing && i < 19){
