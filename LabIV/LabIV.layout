@@ -2,6 +2,11 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
+	<File name="clrm.c" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="375" topLine="6" />
+		</Cursor>
+	</File>
 	<File name="arrayutils.c" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="4968" topLine="123" />
@@ -19,7 +24,8 @@
 	</File>
 	<File name="grow.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="758" topLine="12" />
+			<Cursor1 position="758" topLine="6" />
 		</Cursor>
 	</File>
+	<EditorTabsLayout layout="042606505df9d5cb0083e92a00000002=0;LabIV:grow.c,1;LabIV:tests.c,2;LabIV:arrayutils.h,*3;LabIV:clrm.c@layout2|name=dummy;caption=;state=2098174;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=511;besth=251;minw=511;minh=251;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=042606505df9d5cb0083e92a00000002;caption=;state=2098172;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(5,0,0)=20|" />
 </CodeBlocks_layout_file>

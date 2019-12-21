@@ -35,6 +35,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="arrayutils.h" />
+		<Unit filename="clrm.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="grow.c">
 			<Option compilerVar="CC" />
 		</Unit>

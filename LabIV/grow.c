@@ -9,7 +9,7 @@
 
 int grow(double*, int);
 
-int main(){
+int main1(){
     double *arr = (double*)calloc(ARR_LEN, sizeof(double));
     printf("Введите %d чисел через пробел: ", ARR_LEN);
     darelins(arr, ARR_LEN);
