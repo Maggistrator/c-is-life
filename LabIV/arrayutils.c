@@ -169,3 +169,20 @@ void dfillarran(double *arr, int len) {
         *(arr+i) = (double)genrandom(2);
     }
 }
+
+/**Print Array*/
+void printa(double* arr, int len){
+    for(int i = 0; i < len; i++) printf("%.lf ", *(arr + i));
+    putchar('\n');
+}
+
+/**Print Matrix*/
+void printmx(double** mx, int rows, int col){
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < col; j++){
+            printf("%.lf ", *(*(mx + i)+j));
+        }
+        putchar('\n');
+    }
+    putchar('\n');
+}

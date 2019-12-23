@@ -27,7 +27,7 @@ int main2(){
     for(int i = 0; i < ARR_LEN - deleted; i++) printf("%s ", *(arr + i));
     putchar('\n');
 
-    /*Freeng mem*/
+    /*Freeing mem*/
     for(int i = 0; i < ARR_LEN - deleted; i++) free(*(arr + i));
     free(arr);
 }
