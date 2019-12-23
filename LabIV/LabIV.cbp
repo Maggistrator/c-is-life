@@ -41,6 +41,10 @@
 		<Unit filename="grow.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="launcher.c">
+			<Option compilerVar="CC" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="tests.c">
 			<Option compilerVar="CC" />
 		</Unit>

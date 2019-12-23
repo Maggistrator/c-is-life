@@ -55,7 +55,7 @@
 	<errno.h>
 	<string.h>
 
-1577101169 source:/home/anon-dev/Development/c-is-life/LabIV/grow.c
+1577114953 source:/home/anon-dev/Development/c-is-life/LabIV/grow.c
 	"arrayutils.h"
 	<stdlib.h>
 	<stdio.h>
@@ -94,9 +94,15 @@
 	<string.h>
 	"arrayutils.h"
 
-1577112259 source:/home/anon-dev/Development/c-is-life/LabIV/clrm.c
+1577115299 source:/home/anon-dev/Development/c-is-life/LabIV/clrm.c
 	"arrayutils.h"
 	<stdlib.h>
 	<stdio.h>
 	<string.h>
+
+1577115183 source:/home/anon-dev/Development/c-is-life/LabIV/launcher.c
+	"arrayutils.h"
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
 

@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define ARR_LEN 10
+#define ARR_LEN 5
 void findelcl(char**, char*, int);
 int clrm(char**, char**, int);
 
@@ -13,22 +13,19 @@ int clrm(char**, char**, int);
 * массива встречающихся в нем только один раз
 */
 
-int main(){
+int main2(){
     char **arr = (char**)malloc(sizeof(char*) * ARR_LEN);
-    printf("Исходный массив: \n");
+    printf("Введите сходный массив из %d значений: \n", ARR_LEN);
     for(int i = 0; i < ARR_LEN; i++){
         *(arr + i) = malloc(sizeof(char)*5);
-        /*__autofill:
-         * sprintf(*(arr + i),"%d", genrandom(2)); */
         cinsert(*(arr + i));
     }
 
     puts("\nМассив, очищенный от дубликатов:");
     int deleted = clrm(arr, arr, ARR_LEN);
-
     if (deleted > 0) realloc(arr, (char**)malloc(sizeof(char*) * (ARR_LEN - deleted)));
-
     for(int i = 0; i < ARR_LEN - deleted; i++) printf("%s ", *(arr + i));
+    putchar('\n');
 
     /*Freeng mem*/
     for(int i = 0; i < ARR_LEN - deleted; i++) free(*(arr + i));

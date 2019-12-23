@@ -13,7 +13,7 @@ int main1(){
     double *arr = (double*)calloc(ARR_LEN, sizeof(double));
     printf("Введите %d чисел через пробел: ", ARR_LEN);
     darelins(arr, ARR_LEN);
-    printf("\n%s", grow(arr, ARR_LEN)
+    printf("\n%s\n", grow(arr, ARR_LEN)
     ? "Это возрастающая последовательность."
     : "Это НЕ возрастающая последовательность.");
 }
