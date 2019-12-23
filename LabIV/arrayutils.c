@@ -158,15 +158,15 @@ static int bias = 1;
 * Generate Random
 * digits - максимальное кол-во разрядов в результирующем случайном числе
 */
-int genrandom(int digits) {
+double genrandom(int digits) {
     time_t result = time(NULL);
-    return (int)((result | (++bias * result) * ((bias ^ result) % 3 == 0 ? bias * -1 : bias)) % (int)pow(10, digits));
+    return ((result | (++bias * result) * ((bias ^ result) % 3 == 0 ? bias * -1 : bias)) % (int)pow(10, digits)) + (bias % 10 * 0.1);
 }
 
 /**Double Fill Array Randomly*/
 void dfillarran(double *arr, int len) {
     for(int i = 0; i < len; i++){
-        *(arr+i) = (double)genrandom(2);
+        *(arr+i) = genrandom(1);
     }
 }
 
@@ -180,7 +180,7 @@ void printa(double* arr, int len){
 void printmx(double** mx, int rows, int col){
     for(int i = 0; i < rows; i++) {
         for(int j = 0; j < col; j++){
-            printf("%.lf ", *(*(mx + i)+j));
+            printf("%2.lf ", *(*(mx + i)+j));
         }
         putchar('\n');
     }

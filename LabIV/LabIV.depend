@@ -60,9 +60,9 @@
 	<stdlib.h>
 	<stdio.h>
 
-1577118551 /home/anon-dev/Development/c-is-life/LabIV/arrayutils.h
+1577126052 /home/anon-dev/Development/c-is-life/LabIV/arrayutils.h
 
-1577118908 source:/home/anon-dev/Development/c-is-life/LabIV/arrayutils.c
+1577128924 source:/home/anon-dev/Development/c-is-life/LabIV/arrayutils.c
 	<stdlib.h>
 	<stdio.h>
 	<errno.h>
@@ -105,4 +105,10 @@
 	<stdlib.h>
 	<stdio.h>
 	<errno.h>
+
+1577140887 source:/home/anon-dev/Development/c-is-life/LabIV/informula.c
+	"arrayutils.h"
+	<stdlib.h>
+	<stdio.h>
+	<float.h>
 
