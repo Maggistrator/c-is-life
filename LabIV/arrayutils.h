@@ -9,3 +9,5 @@ double dcheckit(char*);
 void cinsert(char*);
 void carelins(char*, int);
 void darelins(double*, int);
+int genrandom(int);
+void dfillarran(double*, int);

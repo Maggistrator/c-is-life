@@ -9,12 +9,39 @@ void test_ccheckit(void);
 void test_cinsert(void);
 void test_carelins(void);
 void test_darelins(void);
+void test_genrandom(void);
+void test_dfillarran(void);
+
+int main_tests(){
+    test_dfillarran();
+}
+
+void test_dfillarran(){
+    double* testarr = (double*)calloc(5, sizeof(double));
+    dfillarran(testarr, 5);
+    puts("array is:");
+    for(int i = 0; i < 5; i++) printf("%.lf ", *(testarr + i));
+    free(testarr);
+}
+
+void test_genrandom(){
+    puts("2-digits: ");
+    for(int i = 0; i < 20; i++) printf("%d ", genrandom(2));
+    putchar('\n');
+    puts("3-digits: ");
+    for(int i = 0; i < 20; i++) printf("%d ", genrandom(3));
+    putchar('\n');
+    puts("5-digits: ");
+    for(int i = 0; i < 20; i++) printf("%d ", genrandom(5));
+
+}
 
 void test_darelins(){
     double* double_kek = (double*)calloc(5, sizeof(double));
     darelins(double_kek, 5);
     putchar('\n');
     for(int i = 0; i < 5; i++) printf("%lf ", *(double_kek + i));
+    free(double_kek);
 }
 
 void test_carelins(){
@@ -22,6 +49,7 @@ void test_carelins(){
     carelins(kek, 5);
     putchar('\n');
     for(int i = 0; i < 5; i++) printf("%d ", *(kek + i));
+    free(kek);
 }
 
 void test_cinsert(){

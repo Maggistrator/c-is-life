@@ -3,9 +3,9 @@
 #include <stdio.h>
 #include <string.h>
 
-#define ARR_LEN 5
+#define ARR_LEN 10
 void findelcl(char**, char*, int);
-void clrm(char**, char**, int);
+int clrm(char**, char**, int);
 
 
 /**
@@ -15,47 +15,60 @@ void clrm(char**, char**, int);
 
 int main(){
     char **arr = (char**)malloc(sizeof(char*) * ARR_LEN);
+    printf("Исходный массив: \n");
     for(int i = 0; i < ARR_LEN; i++){
-        printf("Введите произвольные данные: ", );
-        scanf();
-        putchar()
+        *(arr + i) = malloc(sizeof(char)*5);
+        /*__autofill:
+         * sprintf(*(arr + i),"%d", genrandom(2)); */
+        cinsert(*(arr + i));
     }
+
+    puts("\nМассив, очищенный от дубликатов:");
+    int deleted = clrm(arr, arr, ARR_LEN);
+
+    if (deleted > 0) realloc(arr, (char**)malloc(sizeof(char*) * (ARR_LEN - deleted)));
+
+    for(int i = 0; i < ARR_LEN - deleted; i++) printf("%s ", *(arr + i));
+
+    /*Freeng mem*/
+    for(int i = 0; i < ARR_LEN - deleted; i++) free(*(arr + i));
+    free(arr);
 }
 
 /**
-* Обработчик массива строк. Так как элементами входного массива
-* будут указатели, они гарантируют уникальность всех
-* элементов-ссылок, что позволит как угодно изменять
-* расположенные по ним значения.
-* Повторяющиеся значения будут заменены указателем на NULL
-* а затем удалены при помощи realloc()
-* (к примеру, все элементы из конца будут переписаны в
-* пустые места в начале, а старые их места затерты на NULL,
-* и затем realloc отберёт у них память, но на это нужно много
-* времени)
+* Clone Remover - заменяет все дубликаты элементов в src на NULL, и записывает чистый результат в out
+* Если передать в качестве src и out один и тот же массив, его элементы автоматически сдвинутся на
+* кол-во удалённых элементов.
+* @return Возвращает кол-во удалённых элементов.
 */
-void clrm(char **src, char **out, int len){
+int clrm(char **src, char **out, int len){
     char *current_element;
+    int deleted = 0;
     for(int i = 0, j = 0; i < len; i++){
-        current_element = *(src+i);
+        current_element = *(src + i);
         if(current_element != NULL){
-            findelcl(src, current_element, len);
-            *(out+j++) = current_element;
-        }
+            findelcl(src + i, current_element, len - i);
+            *(src + i) = (char *) NULL;
+            *(out+j) = current_element;
+            j++;
+        } else deleted++;
     }
+    return deleted;
 }
 
 /**Find 'n Delete Clones of obj in arr of len elements*/
 void findelcl(char **arr, char *obj, int len){
     boolean first_meeting = yup;
     for(int i = 0; i < len; i++){
-        if(!strcmp(*(arr+i), obj)){
-            if(first_meeting) {
-                first_meeting = nope;
-                continue;
-            } else{
-                *(arr+i) = NULL;
+        if(*(arr + i) != NULL){
+            if(!strcmp(*(arr+i), obj)){
+                if(first_meeting) {
+                    first_meeting = nope;
+                    continue;
+                } else{
+                    *(arr+i) = (char*)NULL;
+                }
             }
-        }
+        } else continue;
     }
 }

@@ -5,6 +5,8 @@
 #include <float.h>
 #include <ctype.h>
 #include <unistd.h>
+#include <time.h>
+#include <math.h>
 
 #ifndef boolean
 #define boolean char
@@ -17,14 +19,15 @@ typedef enum {TYPE_INT, TYPE_CHAR, TYPE_FLOAT, TYPE_DOUBLE, TYPE_STRING} TYPE;
 
 /**
 * Char Check It 0.8.0.0
-* Функция проверяет однобайтовое число от -128 до 127 на валидность.
-* Цифры от 0 до 9 и числа от -128 до 127 приводятся из символьного вида в циферный, например:
+* Функция проверяет однобайтовое число на валидность в человечески-итуитивном
+* представлении. Так, цифры от 0 до 9 и числа от -128 до 127 приводятся из символьного вида в циферный, например:
 * '2' = 2 (а не её код 50)
 * '5''0' = 50
-* А односимвольные строки возвращаются в том же виде, например:
+* Тогда как одиночные символы становятся собой, например:
 * '#' = '#'
 * 'a' = 'a'
-* если же исходная строка содержит более одного символа, и это не десятичное число, такое значение считается недопустимым, и функция вернёт 0
+* Если нужно вводить символы цифер, то валидным вводом будут их коды.
+* Если же исходная строка содержит более одного символа, и это не десятичное число, такое значение считается недопустимым, и функция вернёт 0
 * @param data - исходная строка
 */
 char ccheckit(char* str){
@@ -112,14 +115,12 @@ void cinsert(char* src){
     return ;
 }
 
-/**Standart newline input*/
-void stdnlin(){
-    /*TODO: create func*/
-}
-
-/**Char Array Element Insertion*/
+/**Char Array Element Insertion
+* Функция позволяет заполнить заданное кол-во
+* элементов массива char с проверкой введенных значений
+*/
 void carelins(char *ptr, int len){
-    char *raw_data = calloc(32, sizeof(char));
+    char *raw_data = (char*)calloc(32, sizeof(char));
     for(int i = 0; i < len; i++){
         cinsert(raw_data);
         *(ptr + i) = ccheckit(raw_data);
@@ -132,9 +133,13 @@ void carelins(char *ptr, int len){
     return;
 }
 
-/**Double Array Element Insertion*/
+/**
+* Double Array Element Insertion
+* Функция позволяет заполнить заданное кол-во
+* элементов массива вещественных чисел с проверкой введенных значений
+*/
 void darelins(double *ptr, int len){
-    char *raw_data = calloc(32, sizeof(char));
+    char *raw_data = (char*)calloc(32, sizeof(char));
     for(int i = 0; i < len; i++){
         cinsert(raw_data);
         *(ptr + i) = dcheckit(raw_data);
@@ -145,4 +150,22 @@ void darelins(double *ptr, int len){
     }
     free(raw_data);
     return;
+}
+
+static int bias = 1;
+
+/**
+* Generate Random
+* digits - максимальное кол-во разрядов в результирующем случайном числе
+*/
+int genrandom(int digits) {
+    time_t result = time(NULL);
+    return (int)((result | (++bias * result) * ((bias ^ result) % 3 == 0 ? bias * -1 : bias)) % (int)pow(10, digits));
+}
+
+/**Double Fill Array Randomly*/
+void dfillarran(double *arr, int len) {
+    for(int i = 0; i < len; i++){
+        *(arr+i) = (double)genrandom(2);
+    }
 }
