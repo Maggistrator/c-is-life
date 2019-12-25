@@ -23,7 +23,7 @@ int main2(){
 
     puts("\nМассив, очищенный от дубликатов:");
     int deleted = clrm(arr, arr, ARR_LEN);
-    if (deleted > 0) realloc(arr, (char**)malloc(sizeof(char*) * (ARR_LEN - deleted)));
+    if (deleted > 0) realloc(arr, sizeof(char*) * (ARR_LEN - deleted));
     for(int i = 0; i < ARR_LEN - deleted; i++) printf("%s ", *(arr + i));
     putchar('\n');
 
@@ -46,7 +46,7 @@ int clrm(char **src, char **out, int len){
         if(current_element != NULL){
             findelcl(src + i, current_element, len - i);
             *(src + i) = (char *) NULL;
-            *(out+j) = current_element;
+            *(out + j) = current_element;
             j++;
         } else deleted++;
     }
@@ -62,8 +62,8 @@ void findelcl(char **arr, char *obj, int len){
                 if(first_meeting) {
                     first_meeting = nope;
                     continue;
-                } else{
-                    *(arr+i) = (char*)NULL;
+                } else {
+                    *(arr + i) = (char*)NULL;
                 }
             }
         } else continue;

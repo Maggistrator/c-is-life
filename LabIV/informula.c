@@ -6,8 +6,6 @@
 #define ROWS 5
 #define COLUMNS 7
 
-double minposeofmatrix(double**, int, int, int*, int*);
-
 int main3() {
     /*Инициализируем статический массив*/
     double twodimarray[ROWS][COLUMNS];
@@ -23,6 +21,7 @@ int main3() {
     boolean mx_first = yup, arr_first = yup;
 
     for(int i = 0; i < ROWS; i++){
+        //for(int j = 0; )
         dfillarran(*(matrix + i), COLUMNS);
         dfillarran(twodimarray[i], COLUMNS);
     }

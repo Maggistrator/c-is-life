@@ -18,6 +18,8 @@ int main() {
                         break;
                 case 3: main3();
                         break;
+                case 4: main4();
+                        break;
                 case 0: noexit = 0;
                         break;
                 default:
