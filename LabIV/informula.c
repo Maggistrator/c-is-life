@@ -21,23 +21,22 @@ int main3() {
     boolean mx_first = yup, arr_first = yup;
 
     for(int i = 0; i < ROWS; i++){
-        //for(int j = 0; )
         dfillarran(*(matrix + i), COLUMNS);
         dfillarran(twodimarray[i], COLUMNS);
     }
 
     puts("Динамическая матрица:");
-    for(int i = 0; i < ROWS; i++) {
-        for(int j = 0; j < COLUMNS; j++){
-            printf("%2.lf ", *(*(matrix + i)+j));
-            if((int)*(*(matrix + i) + j) > 0){
+    for(int i = 0, ce; i < ROWS; i++) {
+        for(int j = 0; j < COLUMNS; ++j, ce = (int)*(*(matrix + i) + j)){
+            printf("%2d ", ce);
+            if(ce > 0){
                 if(mx_first) {
                     mx_first = nope;
-                    mx_fp = (int)*(*(matrix + i) + j);
-                    mx_fpi = i+1; mx_fpj = i+1;
+                    mx_fp = ce;
+                    mx_fpi = i+1; mx_fpj = j+1;
                 }
-                if((int)*(*(matrix + i) + j) < mx_min) {
-                    mx_min = *(*(matrix + i) + j);
+                if(ce < mx_min) {
+                    mx_min = ce;
                     mx_i = i+1; mx_j = j+1;
                 }
             }

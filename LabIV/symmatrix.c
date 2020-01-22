@@ -7,7 +7,6 @@
 int main4(){
     double **matrix = (double**)malloc(sizeof(char*) * LEN);
     for(int i = 0; i < LEN; i++) dfillarran(*(matrix + i), LEN);
-    printmx(matrix, LEN, LEN);
 
     for(int i = 0; i < LEN; i++){
         for(int j = LEN; j > 0; j--){
