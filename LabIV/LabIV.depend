@@ -187,7 +187,8 @@
 	<float.h>
 	<errno.h>
 
-1579884279 source:/home/anon-dev/Development/c-is-life/LabIV/booksym.c
+1579886959 source:/home/anon-dev/Development/c-is-life/LabIV/booksym.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 
