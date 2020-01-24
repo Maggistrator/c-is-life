@@ -137,3 +137,46 @@
 	<stdlib.h>
 	"arrayutils.h"
 
+1579834098 source:c:\users\Сова\documents\cppworkspace\c-is-life\labiv\arrayutils.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	<float.h>
+	<ctype.h>
+	<unistd.h>
+	<time.h>
+	<math.h>
+
+1579834098 source:c:\users\Сова\documents\cppworkspace\c-is-life\labiv\clrm.c
+	"arrayutils.h"
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+
+1579834098 c:\users\Сова\documents\cppworkspace\c-is-life\labiv\arrayutils.h
+
+1579834098 source:c:\users\Сова\documents\cppworkspace\c-is-life\labiv\grow.c
+	"arrayutils.h"
+	<stdlib.h>
+	<stdio.h>
+
+1579834098 source:c:\users\Сова\documents\cppworkspace\c-is-life\labiv\informula.c
+	"arrayutils.h"
+	<stdlib.h>
+	<stdio.h>
+	<float.h>
+
+1579834098 source:c:\users\Сова\documents\cppworkspace\c-is-life\labiv\launcher.c
+	"arrayutils.h"
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+
+1579834098 source:c:\users\Сова\documents\cppworkspace\c-is-life\labiv\tests.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	"arrayutils.h"
+
