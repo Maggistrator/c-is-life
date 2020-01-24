@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <errno.h>
 
-int main() {
+int main5() {
     char *s = (char*) malloc(sizeof(char) * 8);
     int noexit = 1;
     while(noexit){

@@ -102,7 +102,7 @@
 	<stdio.h>
 	<string.h>
 
-1579850935 source:/home/anon-dev/Development/c-is-life/LabIV/launcher.c
+1579880557 source:/home/anon-dev/Development/c-is-life/LabIV/launcher.c
 	"arrayutils.h"
 	<stdlib.h>
 	<stdio.h>
@@ -180,10 +180,14 @@
 	<string.h>
 	"arrayutils.h"
 
-1579853909 source:/home/anon-dev/Development/c-is-life/LabIV/symmatrix.c
+1579878546 source:/home/anon-dev/Development/c-is-life/LabIV/symmatrix.c
 	<stdio.h>
 	<stdlib.h>
 	"arrayutils.h"
 	<float.h>
 	<errno.h>
+
+1579884279 source:/home/anon-dev/Development/c-is-life/LabIV/booksym.c
+	<stdio.h>
+	<stdlib.h>
 

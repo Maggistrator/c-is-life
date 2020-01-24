@@ -13,7 +13,7 @@ int main4(){
 
     for(int i = 0; i < LEN; i++) {
         for(int j = 0; j < LEN; j++) {
-            printf("Введите %d-й элемент матрицы:",i+j+1);
+            printf("%dx%d: ",i+1,j+1);
             scanf("%s", source);
             *(*(matrix+i)+j)= dcheckit(source);
             if(errno != 0) {
