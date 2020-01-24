@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <errno.h>
 
-int main5() {
+int main() {
     char *s = (char*) malloc(sizeof(char) * 8);
     int noexit = 1;
     while(noexit){
@@ -20,10 +20,12 @@ int main5() {
                         break;
                 case 4: main4();
                         break;
+                case 5: main5();
+                        break;
                 case 0: noexit = 0;
                         break;
                 default:
-                    puts("Такого задания нет.\n");
+                    puts("Такого задания нет.");
                     break;
             }
         } else {

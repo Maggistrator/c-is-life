@@ -64,7 +64,7 @@
 
 1577126052 /home/anon-dev/Development/c-is-life/LabIV/arrayutils.h
 
-1579853664 source:/home/anon-dev/Development/c-is-life/LabIV/arrayutils.c
+1579888540 source:/home/anon-dev/Development/c-is-life/LabIV/arrayutils.c
 	<stdlib.h>
 	<stdio.h>
 	<errno.h>
@@ -102,13 +102,13 @@
 	<stdio.h>
 	<string.h>
 
-1579880557 source:/home/anon-dev/Development/c-is-life/LabIV/launcher.c
+1579888613 source:/home/anon-dev/Development/c-is-life/LabIV/launcher.c
 	"arrayutils.h"
 	<stdlib.h>
 	<stdio.h>
 	<errno.h>
 
-1579710488 source:/home/anon-dev/Development/c-is-life/LabIV/informula.c
+1579896541 source:/home/anon-dev/Development/c-is-life/LabIV/informula.c
 	"arrayutils.h"
 	<stdlib.h>
 	<stdio.h>
@@ -180,14 +180,14 @@
 	<string.h>
 	"arrayutils.h"
 
-1579878546 source:/home/anon-dev/Development/c-is-life/LabIV/symmatrix.c
+1579888290 source:/home/anon-dev/Development/c-is-life/LabIV/symmatrix.c
 	<stdio.h>
 	<stdlib.h>
 	"arrayutils.h"
 	<float.h>
 	<errno.h>
 
-1579886959 source:/home/anon-dev/Development/c-is-life/LabIV/booksym.c
+1579888266 source:/home/anon-dev/Development/c-is-life/LabIV/booksym.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

@@ -3,16 +3,16 @@
 #include <stdio.h>
 #include <float.h>
 
-#define ROWS 5
-#define COLUMNS 7
+#define ROWS 2
+#define COLUMNS 3
 
 int main3() {
     /*Инициализируем статический массив*/
     double twodimarray[ROWS][COLUMNS];
 
     /*Инициализируем динамическую матрицу*/
-    double **matrix = (double**) malloc(sizeof(double*) * ROWS);
-    for(int i = 0; i < ROWS; i++) *(matrix + i) = (double*)malloc(sizeof(double) * COLUMNS);
+    double **matrix = (double**) calloc(ROWS, sizeof(double*));
+    for(int i = 0; i < ROWS; i++) *(matrix + i) = (double*)calloc(COLUMNS, sizeof(double));
 
     int mx_i, mx_j, mx_fpi, mx_fpj;
     int arr_i, arr_j, arr_fpi, arr_fpj;
@@ -20,15 +20,23 @@ int main3() {
     double arr_fp = -1, mx_fp = -1;
     boolean mx_first = yup, arr_first = yup;
 
+    printf("Введите через пробел элементы матрицы:\n");
     for(int i = 0; i < ROWS; i++){
-        dfillarran(*(matrix + i), COLUMNS);
-        dfillarran(twodimarray[i], COLUMNS);
+        darelins(*(matrix + i), COLUMNS);
+        putchar('\n');
     }
 
-    puts("Динамическая матрица:");
-    for(int i = 0, ce; i < ROWS; i++) {
-        for(int j = 0; j < COLUMNS; ++j, ce = (int)*(*(matrix + i) + j)){
-            printf("%2d ", ce);
+    printf("Введите через пробел элементы массива:\n");
+    for(int i = 0; i < ROWS; i++){
+        darelins(twodimarray[i], COLUMNS);
+        putchar('\n');
+    }
+
+    //puts("Динамическая матрица:");
+    for(int i = 0; i < ROWS; i++) {
+        for(int j = 0; j < COLUMNS; ++j){
+            double ce = *(*(matrix + i) + j);
+            //printf("%2.lf ", ce);
             if(ce > 0){
                 if(mx_first) {
                     mx_first = nope;
@@ -41,14 +49,14 @@ int main3() {
                 }
             }
         }
-        putchar('\n');
+        //putchar('\n');
     }
-    putchar('\n');
+    //putchar('\n');
 
-    puts("Статический массив:");
+    //puts("Статический массив:");
     for(int i = 0; i < ROWS; i++) {
         for(int j = 0; j < COLUMNS; j++){
-            printf("%2.lf ", twodimarray[i][j]);
+            //printf("%2.lf ", twodimarray[i][j]);
             if((int)twodimarray[i][j] > 0){
                 if(arr_first) {
                     arr_first = nope;
@@ -61,9 +69,9 @@ int main3() {
                 }
             }
         }
-        putchar('\n');
+        //putchar('\n');
     }
-    putchar('\n');
+    //putchar('\n');
 
     printf("Минимальный положительный элемент матрицы: %.lf с индексами %dx%d\n", mx_min, mx_i, mx_j);
     printf("Минимальный положительный элемент статического массива: %.lf с индексами %dx%d\n", arr_min, arr_i, arr_j);

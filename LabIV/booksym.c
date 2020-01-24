@@ -13,7 +13,7 @@
  *  ницы p книги, содержащей 450 страниц, на каждой странице которой
  *  размещается по 80 строк, длина каждой строки 64 символа.
  */
-int main(){
+void main5(){
     char ***book = (char***)malloc(sizeof(char**) * PAGES);
 
     for(int i = 0; i < PAGES; i++){
@@ -47,7 +47,7 @@ int main(){
 
     char **page = *(book+x-1);
     char *line = *(page+y-1);
-    printf("Это строка: %s", line);
+    printf("Это строка: %s\n", line);
 
     for(int i = 0; i < PAGES; i++){
         char **page = *(book+i);
@@ -58,6 +58,5 @@ int main(){
         free(page);
     }
     free(book);
-    return 0;
 }
 

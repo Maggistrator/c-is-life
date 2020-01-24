@@ -89,6 +89,10 @@ double dcheckit(char* data){
                 return 0;
             }
         }
+    if(strlen(data) == 0) {
+        errno = EINVAL;
+        return 0;
+    }
 
     /*Парсинг, при помощи волшебной функции, которая и без меня всё умеет*/
     long double value = atof(data);

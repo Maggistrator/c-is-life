@@ -6,7 +6,7 @@
 
 #define LEN 4
 
-int main4(){
+void main4(){
     char* source;
     double **matrix = (double**) malloc(sizeof(double*) * LEN);
     for(int i = 0; i < LEN; i++) *(matrix + i) = (double*)malloc(sizeof(double) * LEN);
@@ -41,5 +41,4 @@ int main4(){
 
     for(int i = 0; i < LEN; i++) free(*(matrix + i));
     free(matrix);
-    return 0;
 }
