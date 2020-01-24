@@ -64,7 +64,7 @@
 
 1577126052 /home/anon-dev/Development/c-is-life/LabIV/arrayutils.h
 
-1577128924 source:/home/anon-dev/Development/c-is-life/LabIV/arrayutils.c
+1579853664 source:/home/anon-dev/Development/c-is-life/LabIV/arrayutils.c
 	<stdlib.h>
 	<stdio.h>
 	<errno.h>
@@ -96,19 +96,19 @@
 	<string.h>
 	"arrayutils.h"
 
-1577116336 source:/home/anon-dev/Development/c-is-life/LabIV/clrm.c
+1579710488 source:/home/anon-dev/Development/c-is-life/LabIV/clrm.c
 	"arrayutils.h"
 	<stdlib.h>
 	<stdio.h>
 	<string.h>
 
-1577116541 source:/home/anon-dev/Development/c-is-life/LabIV/launcher.c
+1579850935 source:/home/anon-dev/Development/c-is-life/LabIV/launcher.c
 	"arrayutils.h"
 	<stdlib.h>
 	<stdio.h>
 	<errno.h>
 
-1577140887 source:/home/anon-dev/Development/c-is-life/LabIV/informula.c
+1579710488 source:/home/anon-dev/Development/c-is-life/LabIV/informula.c
 	"arrayutils.h"
 	<stdlib.h>
 	<stdio.h>
@@ -179,4 +179,11 @@
 	<errno.h>
 	<string.h>
 	"arrayutils.h"
+
+1579853909 source:/home/anon-dev/Development/c-is-life/LabIV/symmatrix.c
+	<stdio.h>
+	<stdlib.h>
+	"arrayutils.h"
+	<float.h>
+	<errno.h>
 

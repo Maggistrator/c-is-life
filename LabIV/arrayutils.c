@@ -85,7 +85,7 @@ double dcheckit(char* data){
             default:
                 /*Если символ недпустим, флаг валидности переключается, и функция
                 потребует ввести число заново*/
-                errno = 8;
+                errno = EINVAL;
                 return 0;
             }
         }
@@ -94,7 +94,7 @@ double dcheckit(char* data){
     long double value = atof(data);
     /*Проверка на выход за границы диапазона*/
     if(value > DBL_MAX) {
-        errno = 8;
+        errno = EOVERFLOW;
         return 0;
     } else return value;
 }
