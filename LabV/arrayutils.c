@@ -208,12 +208,15 @@ void printmx(double** mx, int rows, int col){
 /**
 * Find Matrix Max
 * Находит максимальный элемент матрицы и возвращает его значение
+* Для того, чтобы использовать эту функцию для одномерных массивов, следует передать
+* в качестве параметра mx адрес переменной массива(например: &array), а кол-во строк указать 1
 * @param mx указатель на матрицу
 * @param rows кол-во строк
 * @param cols кол-во столбцов
 * @param result указатель на переменную результата. Может быть NULL.
 * @param sx адрес, куда следует записать индекс строки, где найден элемент. Может быть NULL, если эти данные не важны.
 * @param sy адрес, куда следует записать индекс столбца, где найден элемент. Может быть NULL, если эти данные не важны.
+* @return максимальный элемент матрицы как вещественное число
 */
 double findmxmax(double **mx, int rows, int cols, double* result, int* sx, int* sy){
     double max = DBL_MIN;
@@ -233,7 +236,29 @@ double findmxmax(double **mx, int rows, int cols, double* result, int* sx, int* 
     return max;
 }
 
-
+/**
+* Is Element Repeat Itself
+* Возвращает число копий элемента el
+* Можно использовать для одномерных массивов, передав вместо
+* указателя на матрицу адрес переменной массива(например: &arr), а в кол-ве строк 1
+* @param mx матрица
+* @param el исследуемый элемент
+* @param rows кол-во строк матрицы
+* @param cols кол-во столбцов матрицы
+* @param pridx следует ли печатать индексы дубликатов 1-да, 0-нет
+* @return кол-во дубликатов элемента. 0 - если элемент не дублируется.
+*/
+int iselrep(double **mx, double el, int rows, int cols, boolean pridx){
+    int repeats = 0;
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < cols; j++){
+            double* curel = *(mx + i)+j;
+            if(abs(*curel - el) < DBL_EPSILON) repeats++;
+            if(pridx) printf("элемент: %2.lf x:%d y:%d\n", *curel, i+1, j+1);
+        }
+    }
+    return repeats;
+}
 
 
 

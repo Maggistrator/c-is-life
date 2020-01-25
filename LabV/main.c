@@ -27,15 +27,27 @@ int main()
     darelins(hurray, ARR_LEN);
 
     double mxmax, arrmax;
-    int mxi, mxj, ai, aj;
+    int mxi, mxj, aj;
 
     mxmax = findmxmax(matrix, MX_ROWS, MX_COLS, &mxmax, &mxi, &mxj);
-    printf("\nмаксимальный элемент матрицы:%2.lf с индексами %dx%d", mxmax, mxi+1, mxj+1);
+    printf("\nМаксимальный элемент матрицы:%2.lf с индексами %dx%d\n", mxmax, mxi+1, mxj+1);
     arrmax = findmxmax(&hurray, 1, ARR_LEN, &arrmax, NULL, &aj);
-    printf("\nмаксимальный элемент массива:%2.lf с индексом %d", arrmax, aj+1);
+    printf("Максимальный элемент массива:%2.lf с индексом %d\n", arrmax, aj+1);
+    if(!iselrep(&hurray, arrmax, 1, ARR_LEN, nope)) {
+        printf("В массиве несколько элементов имеют максимальное значение! Продолжение работы невозможно!\n");
+        return 1;
+    }
 
-    //написать поиск максимума для матрицы
+    /*обменяем максимальные элементы матрицы и массива*/
+    double temp = *(*(matrix+mxi)+mxj);
+    *(*(matrix+mxi)+mxj) = *(hurray+aj);
+    *(hurray+aj) = temp;
 
+    puts("Обменяем местами максимальные элементы матрицы и массива..");
+    puts("Получившийся массив:");
+    printa(hurray, ARR_LEN);
+    puts("Итоговые значения матрицы:");
+    printmx(matrix, MX_ROWS, MX_COLS);
     return 0;
 }
 
