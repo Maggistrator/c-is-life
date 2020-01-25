@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1579948413 source:/home/anon-dev/Development/c-is-life/LabV/arrayutils.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	<float.h>
+	<ctype.h>
+	<unistd.h>
+	<time.h>
+	<math.h>
+
+1579948113 source:/home/anon-dev/Development/c-is-life/LabV/main.c
+	<stdio.h>
+	<stdlib.h>
+	<float.h>
+	"arrayutils.h"
+
+1579948371 /home/anon-dev/Development/c-is-life/LabV/arrayutils.h
+
