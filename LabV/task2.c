@@ -20,7 +20,7 @@
  * из соображений совместимости с существующей кодовой базой
 */
 
-int main2(){
+void main2(){
     /*Выделим память*/
     double *A = (double*)calloc(SIZE_A, sizeof(double));
     double *B = (double*)calloc(SIZE_B, sizeof(double));

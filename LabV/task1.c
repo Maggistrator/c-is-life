@@ -13,7 +13,7 @@
 * сколько элементов, массив считается некорректным.
 */
 
-int main1()
+void main1()
 {
     double *hurray = (double*)calloc(ARR_LEN, sizeof(double));
     double **matrix = (double**)malloc(sizeof(double*) * MX_ROWS);
@@ -48,6 +48,5 @@ int main1()
     printa(hurray, ARR_LEN);
     puts("Итоговые значения матрицы:");
     printmx(matrix, MX_ROWS, MX_COLS);
-    return 0;
 }
 
