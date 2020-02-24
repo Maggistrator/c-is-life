@@ -13,7 +13,7 @@
 * сколько элементов, массив считается некорректным.
 */
 
-int main()
+int main1()
 {
     double *hurray = (double*)calloc(ARR_LEN, sizeof(double));
     double **matrix = (double**)malloc(sizeof(double*) * MX_ROWS);

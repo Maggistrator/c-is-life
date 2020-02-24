@@ -3,26 +3,18 @@
 #include <stdio.h>
 #include <errno.h>
 
-int main1();
-
 int main() {
     char *s = (char*) malloc(sizeof(char) * 8);
     int noexit = 1;
     while(noexit){
-        puts("Введите номер задания, или 0 чтобы выйти: ");
-        gets(s);
-        int choice = (int)dcheckit(s);
+        printf("Введите номер задания, или 0 чтобы выйти: ");
+        s = fgets(s, 8, stdin);
+        int choice = atoi(s);
         if(errno == 0) {
             switch(choice){
                 case 1: main1();
                         break;
                 case 2: main2();
-                        break;
-                case 3: main3();
-                        break;
-                case 4: main4();
-                        break;
-                case 5: main5();
                         break;
                 case 0: noexit = 0;
                         break;

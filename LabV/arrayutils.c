@@ -9,7 +9,7 @@
 #include <math.h>
 
 #ifndef boolean
-#define boolean char
+#define boolean unsigned char
 #define yup 1
 #define nope 0
 #endif // boolean
