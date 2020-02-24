@@ -8,17 +8,15 @@
 * рядом стоящие одинаковые символы, оставив по одному
 * (АААВВСС >> АВС).
 */
-int main()
-{
+void main1(){
     int clrm(char*, char*);
     printf("Введите строку:\n");
     char *str = (char*)malloc(sizeof(char)*STRLEN);
     str = fgets(str, STRLEN, stdin);
     int deleted = clrm(str, str);
-    printf("Строка, очищенная от дубликатов:%s\n", str);
-    printf("Удалено повторяющихся символов:%d", deleted);
+    printf("Строка, очищенная от дубликатов:%s", str);
+    printf("Удалено повторяющихся символов:%d\n", deleted);
     free(str);
-    return 0;
 }
 
 /**

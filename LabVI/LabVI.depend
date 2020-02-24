@@ -1,5 +1,20 @@
 # depslib dependency file v1.0
-1579964948 source:/home/anon-dev/Development/c-is-life/LabVI/main.c
+1582561154 source:/home/anon-dev/Development/c-is-life/LabVI/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1582563283 source:/home/anon-dev/Development/c-is-life/LabVI/launcher.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+
+1582561332 source:/home/anon-dev/Development/c-is-life/LabVI/task1.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1582568701 source:/home/anon-dev/Development/c-is-life/LabVI/task2.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

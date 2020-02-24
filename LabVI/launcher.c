@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include <errno.h>
 
-void main1();
-void main2();
 int main() {
     char *s = (char*) malloc(sizeof(char) * 8);
     int noexit = 1;
@@ -23,7 +21,6 @@ int main() {
                 break;
             }
         }
-    }
     free(s);
     return 0;
 }
