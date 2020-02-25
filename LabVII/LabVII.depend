@@ -1,6 +1,36 @@
 # depslib dependency file v1.0
-1579978463 source:/home/anon-dev/Development/c-is-life/LabVII/main.c
+1582660163 source:/home/anon-dev/Development/c-is-life/LabVII/main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+
+1582668604 source:/home/anon-dev/Development/c-is-life/LabVII/arrayutils.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+	<string.h>
+	<float.h>
+	<ctype.h>
+	<unistd.h>
+	<time.h>
+	<math.h>
+
+1582563283 source:/home/anon-dev/Development/c-is-life/LabVII/launcher.c
+	<stdlib.h>
+	<stdio.h>
+	<errno.h>
+
+1582669349 source:/home/anon-dev/Development/c-is-life/LabVII/task2.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"arrayutils.h"
+
+1579950830 /home/anon-dev/Development/c-is-life/LabVII/arrayutils.h
+
+1582666654 source:/home/anon-dev/Development/c-is-life/LabVII/sickfuck.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"arrayutils.h"
 
