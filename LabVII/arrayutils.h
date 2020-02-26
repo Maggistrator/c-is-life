@@ -15,3 +15,4 @@ void printa(double*, int);
 void printmx(double**, int, int);
 double findmxmax(double**, int, int, double*, int*, int*);
 int iselrep(double**, double, int, int, boolean);
+unsigned countWords(char*);

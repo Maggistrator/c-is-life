@@ -187,7 +187,7 @@ void dfillarran(double *arr, int len) {
 * прим. не смотря на простоту, данная функциональность необходима черзвычайно часто
 */
 void printa(double* arr, int len){
-    for(int i = 0; i < len; i++) printf("%.lf ", *(arr + i));
+    for(int i = 0; i < len; i++) printf("%.2lf ", *(arr + i));
     putchar('\n');
 }
 
@@ -268,12 +268,10 @@ unsigned countWords(char *str){
     int state = OUT;
     unsigned wc = 0;
 
-    while (*str)
-    {
+    while (*str){
         if (*str == ' ' || *str == '\n' || *str == '\t')
             state = OUT;
-        else if (state == OUT)
-        {
+        else if (state == OUT){
             state = IN;
             ++wc;
         }

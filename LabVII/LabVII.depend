@@ -4,7 +4,7 @@
 	<stdlib.h>
 	<string.h>
 
-1582668604 source:/home/anon-dev/Development/c-is-life/LabVII/arrayutils.c
+1582746202 source:/home/anon-dev/Development/c-is-life/LabVII/arrayutils.c
 	<stdlib.h>
 	<stdio.h>
 	<errno.h>
@@ -15,22 +15,26 @@
 	<time.h>
 	<math.h>
 
-1582563283 source:/home/anon-dev/Development/c-is-life/LabVII/launcher.c
+1582743937 source:/home/anon-dev/Development/c-is-life/LabVII/launcher.c
 	<stdlib.h>
 	<stdio.h>
 	<errno.h>
 
-1582669349 source:/home/anon-dev/Development/c-is-life/LabVII/task2.c
+1582669529 source:/home/anon-dev/Development/c-is-life/LabVII/task2.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"arrayutils.h"
 
-1579950830 /home/anon-dev/Development/c-is-life/LabVII/arrayutils.h
+1582746144 /home/anon-dev/Development/c-is-life/LabVII/arrayutils.h
 
 1582666654 source:/home/anon-dev/Development/c-is-life/LabVII/sickfuck.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"arrayutils.h"
+
+1582746376 source:/home/anon-dev/Development/c-is-life/LabVII/task3.c
+	<stdio.h>
+	<stdlib.h>
 

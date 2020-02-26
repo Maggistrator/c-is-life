@@ -41,10 +41,10 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="sickfuck.c">
+		<Unit filename="task2.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="task2.c">
+		<Unit filename="task3.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
