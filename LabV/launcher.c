@@ -4,6 +4,7 @@
 
 void main1();
 void main2();
+void main3();
 int main() {
     char *s = (char*) malloc(sizeof(char) * 8);
     int noexit = 1;
@@ -16,6 +17,8 @@ int main() {
                     break;
             case 2: main2();
                     break;
+            case 3: main3();
+                    break;
             case 0: noexit = 0;
                     break;
             default:
@@ -23,7 +26,6 @@ int main() {
                 break;
             }
         }
-    }
     free(s);
     return 0;
 }

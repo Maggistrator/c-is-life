@@ -18,8 +18,7 @@
 
 1579950830 /home/anon-dev/Development/c-is-life/LabV/arrayutils.h
 
-1582554965 source:/home/anon-dev/Development/c-is-life/LabV/launcher.c
-	"arrayutils.h"
+1583075684 source:/home/anon-dev/Development/c-is-life/LabV/launcher.c
 	<stdlib.h>
 	<stdio.h>
 	<errno.h>
@@ -35,7 +34,7 @@
 	<stdlib.h>
 	"arrayutils.h"
 
-1582558956 source:/home/anon-dev/Development/c-is-life/LabV/task3.c
+1582560332 source:/home/anon-dev/Development/c-is-life/LabV/task3.c
 	<stdio.h>
 	<stdlib.h>
 	<float.h>

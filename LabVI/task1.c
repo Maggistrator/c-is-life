@@ -14,7 +14,7 @@ void main1(){
     char *str = (char*)malloc(sizeof(char)*STRLEN);
     str = fgets(str, STRLEN, stdin);
     int deleted = clrm(str, str);
-    printf("Строка, очищенная от дубликатов:%s", str);
+    printf("Строка, очищенная от дубликатов:%s\n", str);
     printf("Удалено повторяющихся символов:%d\n", deleted);
     free(str);
 }
